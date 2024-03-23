@@ -98,16 +98,16 @@ public class HomePage extends AppCompatActivity {
     private String fetchUserEmail() {
         String userEmail = null;
 
-        DBHelper dbHelper = new DBHelper(this);
+        MyDBHelper dbHelper = new MyDBHelper(this);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
         // Query the database to fetch the user's email address
-        Cursor cursor = db.rawQuery("SELECT email FROM User_Table LIMIT 1", null);
+        Cursor cursor = db.rawQuery("SELECT email FROM userTable LIMIT 1", null);
 
         // Check if the cursor has data
         if (cursor.moveToFirst()) {
             // Retrieve the email address from the cursor
-            userEmail = cursor.getString(cursor.getColumnIndex("User Email"));
+            userEmail = cursor.getString(cursor.getColumnIndex("userEmail"));
         }
 
         cursor.close();
@@ -117,18 +117,18 @@ public class HomePage extends AppCompatActivity {
     }
 
     private String getUserNickname(String userEmail) {
-        DBHelper dbHelper = new DBHelper(this);
+        MyDBHelper dbHelper = new MyDBHelper(this);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
         String nickname = null;
 
-        // Query the User_Table to retrieve the nickname based on the email address
-        Cursor cursor = db.rawQuery("SELECT nickname FROM User_Table WHERE email = ?", new String[]{userEmail});
+        // Query the userTable to retrieve the nickname based on the email address
+        Cursor cursor = db.rawQuery("SELECT nickname FROM userTable WHERE email = ?", new String[]{userEmail});
 
         // Check if the cursor has data
         if (cursor.moveToFirst()) {
             // Retrieve the nickname from the cursor
-            nickname = cursor.getString(cursor.getColumnIndex("User Nickname"));
+            nickname = cursor.getString(cursor.getColumnIndex("userNickname"));
         }
 
         cursor.close();
