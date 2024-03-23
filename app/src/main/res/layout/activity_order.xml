@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Order Lookup (Your Quests)
+        - User enters the total amount on a recent order
+            - Information such as:
+                1. Total amount
+                2. Transaction ID
+         - Transaction ID is used to confirm the order is valid (real)
+         - After confirmation, convert the total amount user spends on into points
+-->
+<!--TODO implement the points calculation, create a database that contains all of the transaction ids with total amounts for verification then it will be added to user profile database-->
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Order"
+    android:background="#F8F8F8">
+
+
+    <ImageView
+        android:id="@+id/backBtnOrder"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:contentDescription="back arrow image btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow" />
+
+    <ImageView
+        android:id="@+id/homeBtnOrder"
+        android:layout_width="135dp"
+        android:layout_height="129dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginBottom="-30dp"
+        android:contentDescription="home button icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home_button" />
+
+    <!--implement the scrollview-->
+
+    <TextView
+        android:id="@+id/titleOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/blinker"
+        android:text="Your Quest"
+        android:textColor="#343341"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/backBtnOrder"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/getPointsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:backgroundTint="#f8f8f8"
+        android:fontFamily="@font/blinker"
+        android:text="Get Points "
+        android:textColor="#343341"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleOrder" />
+
+    <Button
+        android:id="@+id/rewardsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:backgroundTint="#f8f8f8"
+        android:fontFamily="@font/blinker"
+        android:text="Rewards"
+        android:textColor="#343341"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/getPointsBtn"
+        app:layout_constraintTop_toBottomOf="@+id/titleOrder" />
+
+    <Button
+        android:id="@+id/currentOffersBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="26dp"
+        android:backgroundTint="#f8f8f8"
+        android:fontFamily="@font/blinker"
+        android:text="Current Offers"
+        android:textColor="#343341"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/rewardsBtn"
+        app:layout_constraintTop_toBottomOf="@+id/titleOrder" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="414dp"
+        android:layout_height="469dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getPointsBtn">
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

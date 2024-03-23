@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GetPoints">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/getPointsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="136dp"
+            android:fontFamily="@font/blinker"
+            android:text="Get Points"
+            android:textColor="#343341"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/input_transactionID"
+            android:layout_width="320dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="22dp"
+            android:ems="10"
+            android:hint="Transaction ID"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/getPointsInfo" />
+
+        <EditText
+            android:id="@+id/input_totalOrderAmount"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="Total Order Amount"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_transactionID" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/convertToPoints"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="29dp"
+            android:backgroundTint="#343341"
+            android:text="Convert"
+            android:textColor="#F8F8F8"
+            android:textStyle="bold"
+            app:cornerRadius="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_totalOrderAmount" />
+
+        <TextView
+            android:id="@+id/getPointsInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/blinker"
+            android:text="Enter Transaction ID and total amount from \nyour purchase to get points"
+            android:textColor="#343341"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/getPointsTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Reset Password Page:
+    - When user presses send code
+        - they’ll receive an email of 4 digit code to enter
+        - and it will take the use to 2nd page of reset password:
+            - user enters the code (must validate)
+            - user their new password (update the database)
+-->
+<!--TODO Database confirms the 4 digit code?, and update the password on the database -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn_signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    tools:context=".UpdatePwd">
+
+    <TextView
+        android:id="@+id/resetPwdTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="144dp"
+        android:fontFamily="@font/blinker"
+        android:text="Reset\nPassword"
+        android:textColor="#343341"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sample_logo" />
+
+    <TextView
+        android:id="@+id/textEnterCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:text="Password must be 8 - 16 characters long\nwith numbers and symbols"
+        android:textColor="#C1C1C1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resetPwdTitle" />
+
+    <EditText
+        android:id="@+id/code"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Enter 4-digit code here"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEnterCode" />
+
+    <EditText
+        android:id="@+id/newPwd"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Enter new Password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/code" />
+
+    <EditText
+        android:id="@+id/confirmNewPwd"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Confirm New Password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newPwd" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sendCode"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="44dp"
+        android:backgroundTint="#343341"
+        android:text="Change Password"
+        android:textColor="#F8F8F8"
+        android:textStyle="bold"
+        app:cornerRadius="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="567dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

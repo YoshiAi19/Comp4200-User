@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn_signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage"
+    android:background="#f8f8f8">
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
+        android:fontFamily="@font/blinker"
+        android:paddingEnd="200dp"
+        android:paddingStart="0dp"
+        android:textColor="#343341"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/userAccountIcon"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:contentDescription="user account icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user_account_logo" />
+
+    <ImageView
+        android:id="@+id/homeBtn"
+        android:layout_width="160dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginBottom="-30dp"
+        android:contentDescription="home button icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home_button" />
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:contentDescription="back button icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/welcomeText"
+        app:layout_constraintBottom_toTopOf="@id/homeBtn"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

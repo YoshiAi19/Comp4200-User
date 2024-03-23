@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Log in page:
+    VALID CASE:
+        - If the log in information is valid it takes the user to the home page
+        - and gets the user name for the home page to be concatenated with the welcome textView
+    FAIL CASE:
+        -Show a toast message saying that it is invalid
+        -Stays on activity_main page
+
+    Remember Me checkbox:
+        -will remember the user login information
+-->
+<!--TODO: Validate the user log in information-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn_signup"
+    android:background="#F8F8F8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/appNameLogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="144dp"
+        android:fontFamily="@font/blinker"
+        android:text="Café\nName"
+        android:textColor="#343341"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:text="Log in to your account"
+        android:textColor="#C1C1C1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appNameLogIn" />
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sample_logo" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:fontFamily="@font/blinker"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#343341"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/pwd"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:fontFamily="@font/blinker"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#343341"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <CheckBox
+        android:id="@+id/rememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:text="Remember Me"
+        android:textColor="#C1C1C1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pwd" />
+
+    <!--Forget password-->
+    <TextView
+        android:id="@+id/forgotPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="44dp"
+        android:text="Forgot Password?"
+        android:textColor="#C1C1C1"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pwd" />
+
+    <!--Log in Button-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logIn"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#343341"
+        android:text="Log In"
+        android:textColor="#F8F8F8"
+        android:textStyle="bold"
+        app:cornerRadius="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rememberMe" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signup_btn"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#f8f8f8"
+        app:strokeColor="#343341"
+        app:strokeWidth="0.7dp"
+        android:text="Sign Up"
+        android:textColor="#343341"
+        android:textStyle="bold"
+        app:cornerRadius="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logIn" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
