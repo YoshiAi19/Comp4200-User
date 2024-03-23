@@ -21,25 +21,6 @@
     android:background="#F8F8F8">
 
 
-    <ImageView
-        android:id="@+id/backBtnOrder"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
-        android:contentDescription="back arrow image btn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_arrow" />
-
-    <ImageView
-        android:id="@+id/homeBtnOrder"
-        android:layout_width="135dp"
-        android:layout_height="129dp"
-        android:layout_marginStart="138dp"
-        android:layout_marginBottom="-30dp"
-        android:contentDescription="home button icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/home_button" />
 
     <!--implement the scrollview-->
 
@@ -47,14 +28,14 @@
         android:id="@+id/titleOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/blinker"
         android:text="Your Quest"
         android:textColor="#343341"
         android:textSize="40sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/backBtnOrder"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -62,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#f8f8f8"
         android:fontFamily="@font/blinker"
         android:text="Get Points "
@@ -75,8 +56,8 @@
         android:id="@+id/rewardsBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#f8f8f8"
         android:fontFamily="@font/blinker"
         android:text="Rewards"
@@ -90,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#f8f8f8"
         android:fontFamily="@font/blinker"
         android:text="Current Offers"
@@ -101,14 +82,61 @@
 
     <FrameLayout
         android:id="@+id/frame"
-        android:layout_width="414dp"
-        android:layout_height="469dp"
+        android:layout_width="409dp"
+        android:layout_height="475dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/getPointsBtn">
 
     </FrameLayout>
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bottomActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="center_horizontal"
+        android:background="#343341"
+        android:elevation="4dp"
+        android:gravity="center_horizontal"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/homeButtonOrder"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_button" />
+
+            <ImageView
+                android:id="@+id/pointsCard"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/points_card" />
+
+            <ImageView
+                android:id="@+id/userAccountLogo"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user_account_logo" />
+        </LinearLayout>
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

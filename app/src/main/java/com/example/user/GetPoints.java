@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,7 +29,7 @@ public class GetPoints extends Fragment {
    TextView get_points_title, get_points_info;
    EditText et_input_transactionID, et_input_totalOrderAmount;
 
-   MaterialButton convert_btn;
+   Button convert_btn;
 
     //Create an empty constructor called Get Points
     public GetPoints(){
@@ -46,13 +47,22 @@ public class GetPoints extends Fragment {
         et_input_totalOrderAmount = view.findViewById(R.id.input_totalOrderAmount);
         convert_btn =  view.findViewById(R.id.convertToPoints);
 
+
+
         //When the convert button is pressed an alert message will appear
         convert_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //TODO need to validate the user id and amount with the database
+                //Get the user's amount
+                String getAmount = et_input_totalOrderAmount.getText().toString();
+                //Get the user's transaction id:
+                String getTransactionID = et_input_transactionID.getText().toString();
+
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-                //set the message
-                builder.setMessage("You have new points!\n");
+                //set the message in which it shows the user transaction id and amount and it's corresponding points
+                builder.setMessage("Transaction ID: " + getTransactionID + "\nAmount " + getAmount + " has been converted to: " + PointsConverter.convertDollarToPoints(Double.parseDouble(getAmount)) + " points");
                 //set the title:
                 builder.setTitle("Points Converted");
                 //create the dialog:

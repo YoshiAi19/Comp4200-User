@@ -29,7 +29,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="144dp"
         android:fontFamily="@font/blinker"
-        android:text="Café\nName"
+        android:text="Café\nQuest"
         android:textColor="#343341"
         android:textSize="55sp"
         android:textStyle="bold"
@@ -111,7 +111,7 @@
         app:layout_constraintTop_toBottomOf="@+id/pwd" />
 
     <!--Log in Button-->
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/logIn"
         android:layout_width="320dp"
         android:layout_height="48dp"
@@ -125,7 +125,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rememberMe" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/signup_btn"
         android:layout_width="320dp"
         android:layout_height="48dp"

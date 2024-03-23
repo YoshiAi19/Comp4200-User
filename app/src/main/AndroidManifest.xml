@@ -7,31 +7,19 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label=" "
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.User"
         tools:targetApi="31">
         <activity
+            android:name=".CafeInfoPage"
+            android:exported="false" />
+        <activity
             android:name=".GetPoints"
             android:exported="false" />
         <activity
             android:name=".Recent"
-            android:exported="false" />
-        <activity
-            android:name=".OrderDetails"
-            android:exported="false" />
-        <activity
-            android:name=".Favourites"
-            android:exported="false" />
-        <activity
-            android:name=".Recents"
-            android:exported="false" />
-        <activity
-            android:name=".FullMenu"
-            android:exported="false" />
-        <activity
-            android:name=".Cafe_Menu"
             android:exported="false" />
         <activity
             android:name=".RewardsPage"
@@ -50,9 +38,6 @@
             android:exported="false" />
         <activity
             android:name=".UpdatePwd"
-            android:exported="false" />
-        <activity
-            android:name=".CodeRestPwd"
             android:exported="false" />
         <activity
             android:name=".ResetPwd"

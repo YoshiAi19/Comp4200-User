@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Points_Card"
+    android:background="#f8f8f8">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/userIDCard"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/userID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/blinker"
+                android:text="1234"
+                android:textAlignment="center"
+                android:textColor="#343341"
+                android:textSize="100sp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/forgotToShowID"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/blinker"
+            android:text="Forgot to show ID?"
+            android:textAlignment="center"
+            android:textColor="#343341"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userIDCard" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
