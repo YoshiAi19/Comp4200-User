@@ -69,7 +69,7 @@ public class ButtonsOnManyActivities {
             @Override
             public void onClick(View v) {
                 //Create an intent that will take the user back to the home page:
-                Intent toPointsCard = new Intent(activity, Points_Card.class);
+                Intent toPointsCard = new Intent(activity, points_card_activity.class);
                 activity.startActivity(toPointsCard);
             }
         });

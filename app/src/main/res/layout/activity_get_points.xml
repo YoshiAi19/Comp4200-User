@@ -37,31 +37,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/getPointsInfo" />
 
-        <EditText
-            android:id="@+id/input_totalOrderAmount"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="32dp"
-            android:ems="10"
-            android:hint="Total Order Amount"
-            android:inputType="text"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/input_transactionID" />
-
         <Button
             android:id="@+id/convertToPoints"
             android:layout_width="320dp"
             android:layout_height="48dp"
-            android:layout_marginStart="58dp"
-            android:layout_marginTop="29dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="30dp"
             android:backgroundTint="#343341"
             android:text="Convert"
             android:textColor="#F8F8F8"
             android:textStyle="bold"
             app:cornerRadius="6dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/input_totalOrderAmount" />
+            app:layout_constraintTop_toBottomOf="@+id/input_transactionID" />
 
         <TextView
             android:id="@+id/getPointsInfo"

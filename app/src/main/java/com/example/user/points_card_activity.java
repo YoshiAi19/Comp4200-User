@@ -2,30 +2,22 @@ package com.example.user;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.widget.Toolbar;
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-public class Order extends AppCompatActivity {
-
+public class points_card_activity extends AppCompatActivity {
     ImageView back_btn, home_btn, card_btn,account_btn;
-    TextView titleOrder;
-    Button get_points_btn, rewards_btn,current_offers_btn;
-    FrameLayout frame;
+
+    TextView titleCard;
     ActionBar actionBar;
     Toolbar bottomActionBar;
     ButtonsOnManyActivities buttonsOnManyActivities;
@@ -34,7 +26,7 @@ public class Order extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_order);
+        setContentView(R.layout.activity_points_card);
 
         buttonsOnManyActivities = new ButtonsOnManyActivities(this);
 
@@ -42,11 +34,7 @@ public class Order extends AppCompatActivity {
         home_btn = findViewById(R.id.homeButtonOrder);
         card_btn = findViewById(R.id.pointsCard);
         account_btn = findViewById(R.id.userAccountLogo);
-        titleOrder = findViewById(R.id.titleOrder);
-        get_points_btn = findViewById(R.id.getPointsBtn);
-        rewards_btn = findViewById(R.id.rewardsBtn);
-        current_offers_btn = findViewById(R.id.currentOffersBtn);
-        frame = findViewById(R.id.frame);
+        titleCard = findViewById(R.id.pointsCardTitle);
 
 
         //set up the action bar
@@ -57,23 +45,6 @@ public class Order extends AppCompatActivity {
         actionBar = getSupportActionBar();
         //show the back button in the action bar:
         actionBar.setDisplayHomeAsUpEnabled(true);
-
-
-        //Will display the points card to the user onto the frame
-        get_points_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getPointsCard(v);
-            }
-        });
-
-        //Will
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         //When the home button is pressed it will take the user to the home page:
         //call the home button listener function from the ButtonsOnManyActivities
@@ -89,21 +60,12 @@ public class Order extends AppCompatActivity {
         buttonsOnManyActivities.account(this,account_btn);
 
 
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
     }
-
-    /*When the Get Points Button is pressed:
-      - it will open the points card fragment first
-   */
-    public void getPointsCard (View view){
-        Points_Card pointsCard = new Points_Card();
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.frame,pointsCard);
-        ft.commit();
-
-    }
-
-
 
     //When the back button is pressed it will take the user back to the previous page:
     @Override
@@ -114,6 +76,4 @@ public class Order extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
 }

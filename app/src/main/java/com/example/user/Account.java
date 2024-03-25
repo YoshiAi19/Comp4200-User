@@ -44,6 +44,15 @@ public class Account extends AppCompatActivity {
         //call the home button listener function from the ButtonsOnManyActivities
         buttonsOnManyActivities.HomeButton(this,home_btn);
 
+        //When the point card is pressed it will take the user to the points card fragment
+        //call the points card listener from the ButtonsOnManyActivities
+        buttonsOnManyActivities.pointsCard(this,card_btn);
+
+        //When the user account button is pressed it will take the user to the account page
+        //call the account button listener from the ButtonsOnManyActivities
+        buttonsOnManyActivities.account(this,account_btn);
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.nicknameTitle), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
