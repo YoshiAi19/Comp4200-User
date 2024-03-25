@@ -79,7 +79,6 @@ public class Order extends AppCompatActivity {
         //call the home button listener function from the ButtonsOnManyActivities
         buttonsOnManyActivities.HomeButton(this,home_btn);
 
-
         //When the point card is pressed it will take the user to the points card fragment
         //call the points card listener from the ButtonsOnManyActivities
         buttonsOnManyActivities.pointsCard(this,card_btn);
@@ -87,7 +86,6 @@ public class Order extends AppCompatActivity {
         //When the user account button is pressed it will take the user to the account page
         //call the account button listener from the ButtonsOnManyActivities
         buttonsOnManyActivities.account(this,account_btn);
-
 
     }
 
@@ -100,10 +98,7 @@ public class Order extends AppCompatActivity {
         FragmentTransaction ft = fm.beginTransaction();
         ft.replace(R.id.frame,pointsCard);
         ft.commit();
-
     }
-
-
 
     //When the back button is pressed it will take the user back to the previous page:
     @Override

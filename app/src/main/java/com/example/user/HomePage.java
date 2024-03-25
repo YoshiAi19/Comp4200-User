@@ -17,6 +17,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class HomePage extends AppCompatActivity {
+
     TextView welcomeText;
     ImageView back_btn, home_btn, card_btn,account_btn;
 
