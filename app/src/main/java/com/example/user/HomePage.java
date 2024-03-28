@@ -62,7 +62,7 @@ public class HomePage extends AppCompatActivity {
 
         dataSets.add(new DataSetHomePage("Rewards and Points", R.drawable.rewards_and_points));
         dataSets.add(new DataSetHomePage("Offers and Discounts", R.drawable.offers_and_discounts));
-        dataSets.add(new DataSetHomePage("Order", R.drawable.order));
+        dataSets.add(new DataSetHomePage("Your Quest", R.drawable.order));
         dataSets.add(new DataSetHomePage("Quest Destinations", R.drawable.cafe_info));
 
         adapter = new AdapterForHomePage(dataSets, this, id);

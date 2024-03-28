@@ -60,7 +60,6 @@ public class GetPoints extends Fragment {
                 String userEmail = MainActivity.userEmail;
                 //determine the user id:
                 int id = myDBHelper.getID(userEmail);
-
                 //Get the user's transaction id:
                 String getTransactionID = et_input_transactionID.getText().toString();
 

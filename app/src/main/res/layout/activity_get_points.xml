@@ -33,6 +33,7 @@
             android:layout_marginTop="22dp"
             android:ems="10"
             android:hint="Transaction ID"
+            android:textColor="#343341"
             android:inputType="text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/getPointsInfo" />
@@ -58,7 +59,7 @@
             android:layout_marginStart="56dp"
             android:layout_marginTop="28dp"
             android:fontFamily="@font/blinker"
-            android:text="Enter Transaction ID and total amount from \nyour purchase to get points"
+            android:text="Enter Transaction ID from your purchase \nto get points"
             android:textColor="#343341"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
